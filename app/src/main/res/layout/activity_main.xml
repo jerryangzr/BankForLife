@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9AFFFFFE"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:focusable="false">
+
+        <SearchView
+            android:id="@+id/search_tool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:queryHint="Search...." />
+
+
+        <RelativeLayout
+            android:id="@+id/locationLayout"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/location"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/gpsoff"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="18dp"
+                android:text="location"
+                android:textColor="#2C2C2C"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/profile4" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/popularText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:text="Popular Tag"
+        android:textSize="20sp"
+        android:textColor="#2C2C2C"
+        android:background="#F0C0C0"
+        android:textStyle="bold"/>
+
+
+    <RelativeLayout
+        android:id="@+id/chip_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/popularText"
+        android:layout_marginTop="15dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/popular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_centerInParent="true"
+            app:chipSpacing="8dp"
+            app:chipSpacingVertical="10dp"
+            app:singleSelection="true">
+
+            <!--<com.google.android.material.chip.Chip-->
+            <!--android:id="@+id/gym"-->
+            <!--style="@style/Widget.MaterialComponents.Chip.Choice"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="GYM"-->
+            <!--android:textStyle="bold"-->
+            <!--app:chipBackgroundColor="#4A27FDEA"-->
+            <!--app:chipIcon="@drawable/gym"-->
+            <!--app:chipIconVisible="true"-->
+            <!--app:chipStrokeColor="@color/chip_stroke_color"-->
+            <!--app:chipStrokeWidth="2dp" />-->
+
+
+            <!--<com.google.android.material.chip.Chip-->
+            <!--android:id="@+id/bar"-->
+            <!--style="@style/Widget.MaterialComponents.Chip.Choice"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Bar"-->
+            <!--android:textStyle="bold"-->
+            <!--app:chipBackgroundColor="#4A27FDEA"-->
+            <!--app:chipIcon="@drawable/bar"-->
+            <!--app:chipIconVisible="true"-->
+            <!--app:chipStrokeColor="@color/chip_stroke_color"-->
+            <!--app:chipStrokeWidth="2dp" />-->
+
+            <!--<com.google.android.material.chip.Chip-->
+            <!--android:id="@+id/movie"-->
+            <!--style="@style/Widget.MaterialComponents.Chip.Choice"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Movie"-->
+            <!--android:textStyle="bold"-->
+            <!--app:chipBackgroundColor="#4A27FDEA"-->
+            <!--app:chipIcon="@drawable/theater"-->
+            <!--app:chipIconVisible="true"-->
+            <!--app:chipStrokeColor="@color/chip_stroke_color"-->
+            <!--app:chipStrokeWidth="2dp" />-->
+
+
+            <!--<com.google.android.material.chip.Chip-->
+            <!--android:id="@+id/hotel"-->
+            <!--style="@style/Widget.MaterialComponents.Chip.Choice"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:text="Hotel"-->
+            <!--android:textStyle="bold"-->
+            <!--app:chipBackgroundColor="#4A27FDEA"-->
+            <!--app:chipIcon="@drawable/hotel"-->
+            <!--app:chipIconVisible="true"-->
+            <!--app:chipStrokeColor="@color/chip_stroke_color"-->
+            <!--app:chipStrokeWidth="2dp" />-->
+
+            <!--<com.google.android.material.chip.Chip-->
+            <!--android:id="@+id/ktv"-->
+            <!--style="@style/Widget.MaterialComponents.Chip.Choice"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="KTV"-->
+            <!--android:textStyle="bold"-->
+            <!--app:chipBackgroundColor="#4A27FDEA"-->
+            <!--app:chipIcon="@drawable/ktv"-->
+            <!--app:chipIconVisible="true"-->
+            <!--app:chipStrokeColor="@color/chip_stroke_color"-->
+            <!--app:chipStrokeWidth="2dp" />-->
+
+            <!--<com.google.android.material.chip.Chip-->
+            <!--android:id="@+id/bank"-->
+            <!--style="@style/Widget.MaterialComponents.Chip.Choice"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Bank"-->
+            <!--android:textStyle="bold"-->
+            <!--app:chipBackgroundColor="#4A27FDEA"-->
+            <!--app:chipIcon="@drawable/bank"-->
+            <!--app:chipIconVisible="true"-->
+            <!--app:chipStrokeColor="@color/chip_stroke_color"-->
+            <!--app:chipStrokeWidth="2dp" />-->
+
+
+            <!--<com.google.android.material.chip.Chip-->
+            <!--android:id="@+id/restaurant"-->
+            <!--style="@style/Widget.MaterialComponents.Chip.Choice"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Restaurant"-->
+            <!--android:textStyle="bold"-->
+            <!--app:chipBackgroundColor="#4A27FDEA"-->
+            <!--app:chipIcon="@drawable/restaurant"-->
+            <!--app:chipIconVisible="true"-->
+            <!--app:chipStrokeColor="@color/chip_stroke_color"-->
+            <!--app:chipStrokeWidth="2dp" />-->
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/atm"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ATM"
+                android:textStyle="bold"
+                app:chipBackgroundColor="#4A27FDEA"
+                app:chipIcon="@drawable/atm"
+                app:chipIconVisible="true"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="2dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cafe"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cafe"
+                android:textStyle="bold"
+                app:chipBackgroundColor="#4A27FDEA"
+                app:chipIcon="@drawable/cafe"
+                app:chipIconVisible="true"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="2dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/parking"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parking"
+                android:textStyle="bold"
+                app:chipBackgroundColor="#4A27FDEA"
+                app:chipIcon="@drawable/parking"
+                app:chipIconVisible="true"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="2dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/airport"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Airport"
+                android:textStyle="bold"
+                app:chipBackgroundColor="#4A27FDEA"
+                app:chipIcon="@drawable/airport"
+                app:chipIconVisible="true"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="2dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/mall"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mall"
+                android:textStyle="bold"
+                app:chipBackgroundColor="#4A27FDEA"
+                app:chipIcon="@drawable/mall"
+                app:chipIconVisible="true"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="2dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/pool"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pool"
+                android:textStyle="bold"
+                app:chipBackgroundColor="#4A27FDEA"
+                app:chipIcon="@drawable/pool"
+                app:chipIconVisible="true"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="2dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/university"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="College"
+                android:textStyle="bold"
+                app:chipBackgroundColor="#4A27FDEA"
+                app:chipIcon="@drawable/college"
+                app:chipIconVisible="true"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="2dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/barber"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Barber"
+                android:textStyle="bold"
+                app:chipBackgroundColor="#4A27FDEA"
+                app:chipIcon="@drawable/barber"
+                app:chipIconVisible="true"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="2dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/more"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="160dp"
+                app:chipBackgroundColor="#4A27FDEA"
+                app:chipIcon="@drawable/more1"
+                app:chipIconSize="15dp"
+                app:chipIconVisible="true"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="2dp"
+                app:iconStartPadding="15dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chip_layout"
+        android:layout_marginTop="10dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="10">
+
+        <RelativeLayout
+            android:id="@+id/scroll_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chosen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="15dp"
+                app:singleSelection="true" />
+
+            <TextView
+                android:id="@+id/cardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chosen"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="優惠搜索卡片："
+                android:textSize="20sp"
+                android:textColor="#2C2C2C"
+                android:background="#F0C0C0"
+                android:textStyle="bold"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpage"
+                android:layout_width="600dp"
+                android:layout_height="185dp"
+                android:layout_below="@+id/cardTitle"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:background="#9AFFFFFE"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:paddingStart="60dp"
+                android:paddingEnd="60dp" />
+
+            <Button
+                android:id="@+id/search_Button"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_below="@+id/viewpage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/selector_button_color"
+                android:text="Search" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.widget.RelativeLayout>

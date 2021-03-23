@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#98B1CE"
+        android:paddingLeft="20dp"
+        android:switchMinWidth="50dp"
+        android:text="Location Services"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:track="@drawable/shape_button1" />
+
+    <TextView
+        android:id="@+id/popularTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch1"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#F0C0C0"
+        android:text="Popular City"
+        android:textColor="#2C2C2C"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/popularCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:chipSpacing="10dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/taipei"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:checkable="true"
+            android:paddingLeft="25dp"
+            android:text="台北"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="#d8d4d9"
+            app:chipCornerRadius="1dp"
+            app:chipIconVisible="true"
+            app:chipStrokeColor="@color/chip_location_stroke_color"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/keelung"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:checkable="true"
+            android:paddingLeft="25dp"
+            android:text="基隆"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="#d8d4d9"
+            app:chipCornerRadius="1dp"
+            app:chipIconVisible="true"
+            app:chipStrokeColor="@color/chip_location_stroke_color"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/yilan"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:checkable="true"
+            android:paddingLeft="25dp"
+            android:text="宜蘭"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="#d8d4d9"
+            app:chipCornerRadius="1dp"
+            app:chipIconVisible="true"
+            app:chipStrokeColor="@color/chip_location_stroke_color"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/taoyuan"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:checkable="true"
+            android:paddingLeft="25dp"
+            android:text="桃園"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="#d8d4d9"
+            app:chipCornerRadius="1dp"
+            app:chipIconVisible="true"
+            app:chipStrokeColor="@color/chip_location_stroke_color"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/taichung"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:checkable="true"
+            android:paddingLeft="25dp"
+            android:text="台中"
+            android:textSize="180sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="#d8d4d9"
+            app:chipCornerRadius="1dp"
+            app:chipIconVisible="true"
+            app:chipStrokeColor="@color/chip_location_stroke_color"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/hsinchu"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:checkable="true"
+            android:paddingLeft="25dp"
+            android:text="新竹"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="#d8d4d9"
+            app:chipCornerRadius="1dp"
+            app:chipIconVisible="true"
+            app:chipStrokeColor="@color/chip_location_stroke_color"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/changhua"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:checkable="true"
+            android:paddingLeft="25dp"
+            android:text="彰化"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="#d8d4d9"
+            app:chipCornerRadius="1dp"
+            app:chipIconVisible="true"
+            app:chipStrokeColor="@color/chip_location_stroke_color"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chiayi"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:checkable="true"
+            android:paddingLeft="25dp"
+            android:text="嘉義"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="#d8d4d9"
+            app:chipCornerRadius="1dp"
+            app:chipIconVisible="true"
+            app:chipStrokeColor="@color/chip_location_stroke_color"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/kaohsiung"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:checkable="true"
+            android:paddingLeft="25dp"
+            android:text="高雄"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="#d8d4d9"
+            app:chipCornerRadius="1dp"
+            app:chipIconVisible="true"
+            app:chipStrokeColor="@color/chip_location_stroke_color"
+            app:chipStrokeWidth="2dp" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <!--<com.google.android.material.chip.Chip-->
+    <!--android:id="@+id/yunlin"-->
+    <!--style="@style/Widget.MaterialComponents.Chip.Choice"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginStart="20dp"-->
+    <!--android:checkable="true"-->
+    <!--android:text="雲林"-->
+    <!--android:textSize="50sp"-->
+    <!--android:textStyle="bold"-->
+    <!--android:paddingLeft="25dp"-->
+    <!--app:chipBackgroundColor="#d8d4d9"-->
+    <!--app:chipIconVisible="true"-->
+    <!--app:chipStrokeColor="#868387"-->
+    <!--app:chipStrokeWidth="2dp"-->
+    <!--app:chipCornerRadius="1dp"/>-->
+
+    <!--<com.google.android.material.chip.Chip-->
+    <!--android:id="@+id/tainan"-->
+    <!--style="@style/Widget.MaterialComponents.Chip.Choice"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginStart="20dp"-->
+    <!--android:checkable="true"-->
+    <!--android:text="台南"-->
+    <!--android:textSize="50sp"-->
+    <!--android:textStyle="bold"-->
+    <!--android:paddingLeft="25dp"-->
+    <!--app:chipBackgroundColor="#d8d4d9"-->
+    <!--app:chipIconVisible="true"-->
+    <!--app:chipStrokeColor="#868387"-->
+    <!--app:chipStrokeWidth="2dp"-->
+    <!--app:chipCornerRadius="1dp"/>-->
+
+    <!--<com.google.android.material.chip.Chip-->
+    <!--android:id="@+id/pingtung"-->
+    <!--style="@style/Widget.MaterialComponents.Chip.Choice"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginStart="20dp"-->
+    <!--android:checkable="true"-->
+    <!--android:text="屏東"-->
+    <!--android:textSize="50sp"-->
+    <!--android:textStyle="bold"-->
+    <!--android:paddingLeft="25dp"-->
+    <!--app:chipBackgroundColor="#d8d4d9"-->
+    <!--app:chipIconVisible="true"-->
+    <!--app:chipStrokeColor="#868387"-->
+    <!--app:chipStrokeWidth="2dp"-->
+    <!--app:chipCornerRadius="1dp"/>-->
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#F0C0C0"
+        android:text="Choose"
+        android:textColor="#2C2C2C"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/dropdownLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:clickable="true"
+            android:focusable="true"
+            android:spinnerMode="dropdown"
+            android:tooltipText="地區" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:clickable="true"
+            android:focusable="true"
+            android:spinnerMode="dropdown"
+            android:tooltipText="縣市"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:background="#F0C0C0"
+        android:layout_marginTop="10dp"
+        android:text="Range"
+        android:textColor="#2C2C2C"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="0 m"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/seekBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 m"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_weight="2"
+            android:max="800"
+            android:progressDrawable="@drawable/seek_bar"
+            android:thumb="@drawable/seek_thumb" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="800 m "
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/showMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="15dp">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</LinearLayout>
+
+
+

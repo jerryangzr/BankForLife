@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BCFFFEFE">
+
+    <TextView
+        android:id="@+id/info_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Card Info"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="286dp"
+        android:layout_height="164dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/info_Title"
+        android:layout_marginTop="15dp"
+        android:background="#BCFFFEFE"
+        android:id="@+id/card">
+
+        <ImageView
+            android:id="@+id/cardImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card1"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/card"
+        android:ems="5"
+        android:text="活動期間 : "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+    <!--ems : 幾個字符寬度-->
+
+    <TextView
+        android:id="@+id/period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card"
+        android:layout_toEndOf="@id/title1"
+        android:layout_marginTop="23dp"
+        android:text="Period"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="#797878"/>
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title1"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="30dp"
+        android:ems="5"
+        android:text="優惠活動 : "
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/promotion"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_below="@id/title2"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/promotion1_1"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <ImageView
+        android:id="@+id/promotion1"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_below="@id/title2"
+        android:layout_toRightOf="@+id/promotion"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/promotion1_2"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/promotion2"-->
+        <!--android:layout_width="130dp"-->
+        <!--android:layout_height="130dp"-->
+        <!--android:layout_below="@id/title2"-->
+        <!--android:layout_marginStart="280dp"-->
+        <!--android:src="@drawable/promotion2"-->
+        <!--android:clickable="true"-->
+        <!--android:focusable="true"/>-->
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/promotion"
+        android:layout_marginStart="30dp"
+        android:ems="5"
+        android:text="詳細資訊: "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_below="@id/title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="40dp"
+            android:text="Content"
+            android:textStyle="bold"
+            android:textColor="#797878"/>
+    </ScrollView>
+
+</RelativeLayout>

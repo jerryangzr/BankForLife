@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6AEDF4F5">
+
+    <TextView
+        android:id="@+id/info_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Search Result..."
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chosenTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_Title"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="25dp"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:id="@+id/filter"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/chosenTag"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:clickable="true"
+        android:dropDownWidth="100dp"
+        android:focusable="true"
+        android:paddingEnd="5dp"
+        android:popupElevation="3dp"
+        android:prompt="@string/spinner_title"
+        android:spinnerMode="dropdown"></Spinner>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/filter"/>
+
+
+</RelativeLayout>

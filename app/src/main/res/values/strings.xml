@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Bank for life</string>
+    <string name="title_update_location">Saved Location</string>
+    <string name="message_update_location">Update or Clear saved information?</string>
+    <string name="update">update</string>
+    <string name="clear">clear</string>
+    <string name="title_current_location">Current Location</string>
+    <string name="message_current_location">Save the current location?</string>
+    <string name="google_play_service_missing">Google Play service not installed.</string>
+    <string name="spinner_title">- Sort By -</string>
+    <string-array name="district_array">
+        <item>北部</item>
+        <item>中部</item>
+        <item>南部</item>
+        <item>東部</item>
+    </string-array>
+
+</resources>
