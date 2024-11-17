@@ -1,4 +1,4 @@
-## Bank for Life (Android Mobile App)
+## Bank for Life (Java-based Android Mobile App)
 > ### Main Page:  
 
 <p align="center"> 
